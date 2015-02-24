@@ -1,0 +1,77 @@
+\documentclass[12pt, a4paper]{article}
+
+
+\usepackage{fixltx2e}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+\usepackage[final, activate=true,protrusion=true, kerning=true, expansion=true ]{microtype}
+
+\author{
+Saurabh Mathur \\
+\texttt{14BIT0180}
+\and
+Abishek Aditya \\
+\texttt{14BIT0137}
+\and
+Tushar Bhatia \\
+\texttt{14BIT0163}
+}
+
+\title{File Compressor}
+
+\begin{document}
+
+    \maketitle
+    
+    
+    \section*{Problem Statement}
+    This project deals with the problem of storage and transmission of large files. \\
+    We aim to create an application that performs data compression using the Lempel Ziv Welch (LZW) universal lossless data compression algorithm. 
+    \\ This will facilitate efficient storage and transmission.
+    \section*{Input}
+    The input will consist of a setting that is, encode or decode, the file-name for an input file and the name of the output file (optional). The input file may be of any type.
+    \section*{Concepts Used}
+    Following Concepts are used -
+        \begin{itemize}
+        \item Object Oriented Programming
+            \begin{itemize}
+                \item Encapsulation
+                \item Abstraction
+                \item Inheritance
+                \item Polymorphism.
+        
+        \end{itemize}
+        \item Data Structures
+            \begin{itemize}
+                \item Hash Map or Dictionary
+            \end{itemize}
+        \item Input/Output
+            \begin{itemize}
+                \item File Streams
+                \item Command Line Arguments
+            \end{itemize}
+        \item Error Handling and Exceptions
+        \end{itemize}
+    \section*{Methodology}
+    There will be three major components - the encoder, the decoder and the input/output system. \\The input/output system will parse the command line arguments, read the input file and suitably call the encode or decode functions with its contents. \\If there is time before the deadline, a Graphical User Interface (GUI) shall also be implemented.  \\
+    The source code will be updated time to time on the Project Repository at \texttt{\small{https://github.com/saurabhmathur96/ITE201-File-Compressor}}.
+    \section*{Work Distribution}
+        \begin{tabular}{llr}
+        \toprule
+        \cmidrule(r){1-2}
+        Person    & Component \\
+        \midrule
+        Abishek      & Decoder  \\
+        Saurabh   & Encoder       \\
+        Tushar       & File-Input/Output     \\
+        \bottomrule
+        \end{tabular}
+    \section*{Output}
+    The output will consist of a single output file that will have been encoded or decoded depending on the input.
+    \section*{Timeline}
+    The project shall be completed by May 8, 2015.
+    \section*{Sources of Information}
+    \url{http://www.cs.cf.ac.uk/Dave/Multimedia/node214.html}\\
+    \url{http://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welc}
+\end{document}
