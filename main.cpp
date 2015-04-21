@@ -1,4 +1,5 @@
 #include "compressor.h"
+#include "decompressor.h"
 #include <iostream>
 
 using namespace std;
