@@ -2,6 +2,7 @@
 #ifndef __LZWCOMPRESSOR_H_INCLUDED__
 #define __LZWCOMPRESSOR_H_INCLUDED__
 
+#include "LZWGlobals.hpp"
 
 #include <iostream>
 #include <fstream>
@@ -19,13 +20,6 @@
 #include <vector>
 
 using CodeType=std::uint16_t; 
-
-namespace globals {
-
-/// Dictionary Maximum Size (when reached, the dictionary will be reset)
-const CodeType dms {std::numeric_limits<CodeType>::max()};
-
-}
 
 
 class LZWCompressor
