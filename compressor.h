@@ -1,12 +1,15 @@
-#ifndef COMPRESSOR_H
-#define COMPRESSOR_H
+//LZWCompressor.hpp
+#ifndef __LZWCOMPRESSOR_H_INCLUDED__
+#define __LZWCOMPRESSOR_H_INCLUDED__
 
+
+#include <iostream>
+#include <fstream>
 #include <cstdint>
 #include <cstdlib>
 #include <exception>
 #include <fstream>
 #include <ios>
-#include <iostream>
 #include <istream>
 #include <limits>
 #include <map>
@@ -15,27 +18,26 @@
 #include <string>
 #include <vector>
 
-#include "ConfigUtils.h"
+using CodeType=std::uint16_t; 
 
-using namespace std;
+namespace globals {
 
-class Compressor
+/// Dictionary Maximum Size (when reached, the dictionary will be reset)
+const CodeType dms {std::numeric_limits<CodeType>::max()};
+
+}
+
+
+class LZWCompressor
 {
-  
-  public:
-    Compressor(string input_file, string output_file);
-    void compress();
-    ~Compressor();
-    
-  private:
-    
-    map<vector<char>, CodeType> dictionary;
-    ofstream output_stream;
-    ifstream input_stream;
-    void reset_dictionary();
-    
+public:
+	LZWCompressor(std::ifstream &inputFile, std::ofstream &outputFile);
+	void compress();
+private:
+	std::ifstream *in;
+	std::ofstream *out;
+	std::map<std::vector<char>, CodeType> dictionary;
+	void inline reset_dictionary();
 };
-
-
 
 #endif
