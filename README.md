@@ -1,11 +1,11 @@
 ## ITE201-File-Compressor
 Project for ITE201: Object Oriented Programming Concepts
 
-###Build instructions 
+### Build instructions 
 
 ```g++ -std=c++11 LZWGlobals.cpp LZWCompressor.cpp LZWDecompressor.cpp LZWCodec.cpp main.cpp -o lzw```
 
-###Usage
+### Usage
 
 ```
 lzw -flag input_file output_file
